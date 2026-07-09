@@ -1,0 +1,19 @@
+# Ignore runtime tools (Node.js runtime distribution)
+/tools/
+
+# Ignore local database files
+/data/
+
+# Ignore application logs
+/logs/
+
+# Ignore user uploads
+/uploads/
+
+# Ignore nested duplicate repo directory
+/Connect/
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+*.log
