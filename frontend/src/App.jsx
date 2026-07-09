@@ -5,7 +5,7 @@ import TasksBoards from './components/TasksBoards';
 import Events from './components/Events';
 
 
-const API_BASE = `http://${window.location.hostname}:8080/api`;
+const API_BASE = import.meta.env.VITE_API_BASE_URL || `http://${window.location.hostname}:8080/api`;
 
 export default function App() {
   const [currentUser, setCurrentUser] = useState(null);
@@ -268,7 +268,7 @@ export default function App() {
 
         for (const targetId of targets) {
           try {
-            await fetch(`http://${window.location.hostname}:8080/api/chat`, {
+            await fetch(`${API_BASE}/chat`, {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify({
